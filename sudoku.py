@@ -45,7 +45,6 @@ def main():
 
         numbers = [1,2,3,4,5,6,7,8,9]
 
-        # check square
         counter = 0
         x = 0
         while counter != 50:
@@ -64,7 +63,6 @@ def main():
             
         number = choice(numbers)
 
-        #check row
         counter = 0
         while counter != 50:
             if len(numbers) == 0:
@@ -89,22 +87,6 @@ def main():
         else:
             number = choice(numbers)
 
-        #check column
-
-        """
-        for x in range(3):
-            for y in range(3):
-                if number == table[x][y][num]:
-                    numbers.remove(number)
-                else:
-                    pass
-                if len(numbers) == 0:
-                    number = 0
-                    break
-                else:
-                    number = choice(numbers)
-        x += 3
-        """
         cen1 = [0, 3, 6]
         cen2 = [1, 4, 7]
         cen3 = [2, 5, 8]
@@ -174,8 +156,7 @@ def main():
                 counter += 1
 
         return(number)
-
-
+        
 
     def sudoku():
         numbers = [[1,2,3,4,5,6,7,8,9] for x in range(9)]
@@ -192,12 +173,6 @@ def main():
             if row == 3:
                 row = 0
                 square += 1
-
-            """
-            number = choice(numbers[square])
-            table[square][row][num] = number
-            numbers[square].remove(number)
-            """
 
             number = valid_check(square, row, num)
             table[square][row][num] = number
